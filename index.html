@@ -3,153 +3,406 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nヤン ポートフォリオ</title>
+
+<title>Nヤンのポートフォリオ</title>
 
 <style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#eef3f8;
-    color:#333;
+* {
+    box-sizing: border-box;
 }
 
-header{
-    background:#12385c;
-    color:white;
-    padding:40px;
-    text-align:center;
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 "Noto Sans JP", Arial, sans-serif;
+    background: #f4f7fa;
+    color: #263442;
+    line-height: 1.7;
 }
 
-section{
-    max-width:1000px;
-    margin:auto;
-    padding:30px;
+/* ヘッダー */
+header {
+    background: linear-gradient(135deg, #12385a, #1c5a86);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
 }
 
-.card{
-    background:white;
-    border-radius:12px;
-    padding:20px;
-    margin-bottom:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,.1);
+header h1 {
+    margin: 0 0 12px;
+    font-size: 38px;
 }
 
-h2{
-    color:#12385c;
+header p {
+    margin: 0;
+    font-size: 18px;
+    opacity: 0.95;
 }
 
-.skill{
-    display:inline-block;
-    background:#12385c;
-    color:white;
-    padding:8px 15px;
-    border-radius:20px;
-    margin:5px;
+/* 全体 */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px 25px 70px;
+}
+
+section {
+    margin-bottom: 55px;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #12385a;
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #1c5a86;
+}
+
+/* 自己紹介 */
+.intro {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.intro p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* 資格・スキル */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.info-card {
+    background: white;
+    padding: 27px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.info-card h3 {
+    color: #12385a;
+    margin-top: 0;
+    font-size: 21px;
+}
+
+.info-card ul {
+    margin-bottom: 0;
+    padding-left: 22px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: #12385a;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* 制作物 */
+.projects {
+    display: grid;
+    gap: 32px;
+}
+
+.project {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.09);
+}
+
+.project-image {
+    background: #eef3f7;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-image img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.project-content {
+    padding: 28px 30px 32px;
+}
+
+.project-content h3 {
+    margin: 0 0 8px;
+    color: #12385a;
+    font-size: 24px;
+}
+
+.project-label {
+    display: inline-block;
+    background: #e5f1f8;
+    color: #14547a;
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    margin: 8px 0;
+}
+
+.features {
+    margin-top: 18px;
+    padding: 17px 20px;
+    background: #f5f8fa;
+    border-radius: 9px;
+}
+
+.features strong {
+    color: #12385a;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    background: #12385a;
+    color: white;
+    padding: 28px 15px;
+    font-size: 14px;
+}
+
+/* スマホ */
+@media (max-width: 700px) {
+
+    header {
+        padding: 50px 18px;
+    }
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 30px 16px 50px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
 }
 </style>
-
 </head>
+
 
 <body>
 
 <header>
-<h1>Nヤンのポートフォリオ</h1>
-<p>Excelで業務改善・効率化を目指しています</p>
+    <h1>Nヤンのポートフォリオ</h1>
+    <p>Excelを活用した業務管理・効率化ツールの制作</p>
 </header>
+
+
+<main class="container">
 
 <section>
 
-<div class="card">
-<h2>自己紹介</h2>
+<h2 class="section-title">About</h2>
 
+<div class="intro">
 <p>
-Excel・VBA・関数を学習しながら、
-実務で役立つ管理システムの制作に取り組んでいます。
+Excel・VBA・各種関数を学習しながら、
+実際の業務や日常で役立つ「使いやすい管理ツール」を意識して制作しています。
+学習した知識を作品として形にし、業務の効率化や情報の見える化につなげることを目指しています。
 </p>
-
 </div>
 
-<div class="card">
+</section>
 
-<h2>保有資格</h2>
+
+<section>
+
+<h2 class="section-title">Skills & Qualifications</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<h3>保有資格</h3>
 
 <ul>
-<li>MOS Excel Associate</li>
 <li>MOS Excel Expert</li>
+<li>MOS Excel Associate</li>
 </ul>
 
 </div>
 
-<div class="card">
 
-<h2>学習スキル</h2>
+<div class="info-card">
+
+<h3>スキル</h3>
+
+<div class="skills">
 
 <span class="skill">Excel</span>
-<span class="skill">関数</span>
-<span class="skill">タイピング３級レベル</span>
+<span class="skill">VBA</span>
+<span class="skill">Excel関数</span>
 
 </div>
 
-<div class="card">
-
-<h2>制作物</h2>
-
-<div class="project">
-  <h3>ペットお世話記録</h3>
-
-  <img src="pet-care3.png"
-       alt="ペットお世話記録の画面"
-       style="width:100%; max-width:800px; border-radius:10px;">
-
-  <p>
-    複数のペットのお世話状況を記録・管理するためにExcelで制作しました。
-    日々の記録をカレンダー形式で確認でき、飼育状況の推移をグラフで可視化できます。
-  </p>
-
-  <p><strong>主な機能：</strong>
-    個体情報管理・飼育記録・カレンダー表示・推移グラフ
-  </p>
-</div>
-<hr style="margin:30px 0;">
-
-<div class="project">
-  <h3>業務管理システム</h3>
-
-  <img src="business-system.png"
-       alt="業務管理システムのダッシュボード画面"
-       style="width:100%; max-width:800px; border-radius:10px;">
-
-  <p>
-    タスクの進捗状況を一元管理し、業務状況を把握しやすくするためにExcelで制作しました。
-    ダッシュボードから総タスク数・完了率・進行状況などを確認できるようにしています。
-  </p>
-
-  <p><strong>主な機能：</strong>
-    タスク管理・進捗管理・ダッシュボード・担当者別集計
-  </p>
 </div>
 
-<hr style="margin:30px 0;">
-
-<div class="project">
-  <h3>入出庫・在庫管理表</h3>
-
-  <img src="inventory-system.png"
-       alt="入出庫・在庫管理表の画面"
-       style="width:100%; max-width:800px; border-radius:10px;">
-
-  <p>
-    商品の入庫・出庫を記録し、在庫状況を管理するためにExcelで制作しました。
-    入出庫の記録から在庫状況を確認しやすい構成にしています。
-  </p>
-
-  <p><strong>主な機能：</strong>
-    入庫記録・出庫記録・在庫管理
-  </p>
-</div>
 </div>
 
 </section>
+
+
+<section>
+
+<h2 class="section-title">Works</h2>
+
+<div class="projects">
+
+
+<!-- 業務管理システム -->
+
+<article class="project">
+
+<div class="project-image">
+<img src="business-system.png"
+     alt="業務管理システムのダッシュボード画面">
+</div>
+
+<div class="project-content">
+
+<span class="project-label">Excel 業務管理</span>
+
+<h3>業務管理システム</h3>
+
+<p>
+タスクの進捗状況を一元管理し、
+業務全体の状況を把握しやすくすることを目的に制作したExcel管理システムです。
+</p>
+
+<p>
+ダッシュボードから総タスク数・完了率・進行状況などを確認でき、
+担当者別の集計にも対応できる構成にしています。
+</p>
+
+<div class="features">
+<strong>主な機能</strong><br>
+タスク管理 ／ 進捗管理 ／ ダッシュボード ／ 担当者別集計
+</div>
+
+</div>
+
+</article>
+
+
+<!-- 入出庫・在庫管理表 -->
+
+<article class="project">
+
+<div class="project-image">
+<img src="inventory-system.png"
+     alt="入出庫・在庫管理表の画面">
+</div>
+
+<div class="project-content">
+
+<span class="project-label">Excel 在庫管理</span>
+
+<h3>入出庫・在庫管理表</h3>
+
+<p>
+商品の入庫・出庫を記録し、
+在庫状況を分かりやすく管理するために制作したExcelツールです。
+</p>
+
+<p>
+日々の入出庫情報を入力し、
+在庫管理につなげられる実用的な構成を意識して制作しています。
+</p>
+
+<div class="features">
+<strong>主な機能</strong><br>
+入庫記録 ／ 出庫記録 ／ 在庫管理
+</div>
+
+</div>
+
+</article>
+
+
+<!-- ペットお世話記録 -->
+
+<article class="project">
+
+<div class="project-image">
+<img src="pet-care3.png"
+     alt="ペットお世話記録のカレンダーとグラフ">
+</div>
+
+<div class="project-content">
+
+<span class="project-label">Excel 記録・可視化</span>
+
+<h3>ペットお世話記録</h3>
+
+<p>
+複数のペットのお世話状況を記録・管理するために制作したExcelツールです。
+</p>
+
+<p>
+日々の記録をカレンダー形式で確認でき、
+飼育状況の推移をグラフで可視化できるようにしています。
+複数の個体を管理しやすい構成も意識しました。
+</p>
+
+<div class="features">
+<strong>主な機能</strong><br>
+個体情報管理 ／ 飼育記録 ／ カレンダー表示 ／ 推移グラフ
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+Excel Portfolio — 学習したスキルを実践的な制作物へ
+</footer>
 
 </body>
 </html>
