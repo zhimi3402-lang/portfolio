@@ -8,399 +8,460 @@
 
 <style>
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 "Noto Sans JP", Arial, sans-serif;
-    background: #f4f7fa;
-    color: #263442;
-    line-height: 1.7;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               "Noto Sans JP", Arial, sans-serif;
+  background: #f4f7fa;
+  color: #263442;
+  line-height: 1.75;
 }
 
-/* ヘッダー */
 header {
-    background: linear-gradient(135deg, #12385a, #1c5a86);
-    color: white;
-    padding: 70px 20px;
-    text-align: center;
+  background: linear-gradient(135deg, #103653, #1d668f);
+  color: white;
+  text-align: center;
+  padding: 75px 20px;
 }
 
 header h1 {
-    margin: 0 0 12px;
-    font-size: 38px;
+  margin: 0 0 12px;
+  font-size: 38px;
 }
 
 header p {
-    margin: 0;
-    font-size: 18px;
-    opacity: 0.95;
+  margin: 0;
+  font-size: 18px;
 }
 
-/* 全体 */
+header .sub {
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 45px 25px 70px;
+  max-width: 1050px;
+  margin: auto;
+  padding: 45px 25px 70px;
 }
 
 section {
-    margin-bottom: 55px;
+  margin-bottom: 55px;
 }
 
 .section-title {
-    font-size: 28px;
-    color: #12385a;
-    margin-bottom: 22px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #1c5a86;
+  color: #103653;
+  font-size: 28px;
+  margin-bottom: 22px;
+  padding-bottom: 9px;
+  border-bottom: 3px solid #2382ad;
 }
 
-/* 自己紹介 */
 .intro {
-    background: white;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
 }
 
 .intro p {
-    margin: 0;
-    font-size: 16px;
+  margin: 0;
 }
 
-/* 資格・スキル */
 .info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
 }
 
 .info-card {
-    background: white;
-    padding: 27px;
-    border-radius: 14px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  background: white;
+  padding: 27px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
 }
 
 .info-card h3 {
-    color: #12385a;
-    margin-top: 0;
-    font-size: 21px;
+  color: #103653;
+  margin-top: 0;
 }
 
 .info-card ul {
-    margin-bottom: 0;
-    padding-left: 22px;
+  margin-bottom: 0;
+  padding-left: 22px;
 }
 
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .skill {
-    background: #12385a;
-    color: white;
-    padding: 7px 16px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 600;
+  background: #103f61;
+  color: white;
+  padding: 7px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-/* 制作物 */
+.learning-note {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #607080;
+}
+
 .projects {
-    display: grid;
-    gap: 32px;
+  display: grid;
+  gap: 35px;
 }
 
 .project {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.09);
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 22px rgba(0,0,0,0.09);
 }
 
 .project-image {
-    background: #eef3f7;
-    padding: 20px;
-    text-align: center;
+  background: #eef3f7;
+  padding: 22px;
+  text-align: center;
 }
 
 .project-image img {
-    width: 100%;
-    max-height: 520px;
-    object-fit: contain;
-    display: block;
-    margin: auto;
-    border-radius: 8px;
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  margin: auto;
+  border-radius: 8px;
 }
 
 .project-content {
-    padding: 28px 30px 32px;
+  padding: 28px 32px 32px;
 }
 
 .project-content h3 {
-    margin: 0 0 8px;
-    color: #12385a;
-    font-size: 24px;
+  color: #103653;
+  font-size: 24px;
+  margin: 4px 0 12px;
 }
 
 .project-label {
-    display: inline-block;
-    background: #e5f1f8;
-    color: #14547a;
-    padding: 4px 11px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 15px;
+  display: inline-block;
+  background: #e4f2f8;
+  color: #126080;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .project-content p {
-    margin: 8px 0;
+  margin: 10px 0;
 }
 
 .features {
-    margin-top: 18px;
-    padding: 17px 20px;
-    background: #f5f8fa;
-    border-radius: 9px;
+  margin-top: 20px;
+  padding: 17px 20px;
+  background: #f4f7f9;
+  border-radius: 9px;
 }
 
 .features strong {
-    color: #12385a;
+  color: #103653;
 }
 
-/* フッター */
+.note {
+  margin-top: 15px;
+  padding: 13px 17px;
+  border-left: 4px solid #2382ad;
+  background: #f2f8fb;
+  font-size: 14px;
+}
+
 footer {
-    text-align: center;
-    background: #12385a;
-    color: white;
-    padding: 28px 15px;
-    font-size: 14px;
+  background: #103653;
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+  font-size: 14px;
 }
 
-/* スマホ */
 @media (max-width: 700px) {
 
-    header {
-        padding: 50px 18px;
-    }
+  header {
+    padding: 50px 18px;
+  }
 
-    header h1 {
-        font-size: 29px;
-    }
+  header h1 {
+    font-size: 29px;
+  }
 
-    header p {
-        font-size: 16px;
-    }
+  header p {
+    font-size: 16px;
+  }
 
-    .container {
-        padding: 30px 16px 50px;
-    }
+  .container {
+    padding: 30px 16px 50px;
+  }
 
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .project-content {
-        padding: 22px;
-    }
+  .section-title {
+    font-size: 24px;
+  }
 
-    .section-title {
-        font-size: 24px;
-    }
+  .project-content {
+    padding: 22px;
+  }
+
+  .project-content h3 {
+    font-size: 21px;
+  }
+
+  .project-image {
+    padding: 12px;
+  }
 }
 </style>
 </head>
 
-
 <body>
 
 <header>
-    <h1>Nヤンのポートフォリオ</h1>
-    <p>Excelを活用した業務管理・効率化ツールの制作</p>
+  <h1>Nヤンのポートフォリオ</h1>
+  <p>Excelを活用した管理ツール・業務効率化を中心に制作しています</p>
+  <div class="sub">学んだ知識を、実際に使える「仕組み」にすることを大切にしています。</div>
 </header>
-
 
 <main class="container">
 
 <section>
+  <h2 class="section-title">About</h2>
 
-<h2 class="section-title">About</h2>
-
-<div class="intro">
-<p>
-Excel・VBA・各種関数を学習しながら、
-実際の業務や日常で役立つ「使いやすい管理ツール」を意識して制作しています。
-学習した知識を作品として形にし、業務の効率化や情報の見える化につなげることを目指しています。
-</p>
-</div>
-
+  <div class="intro">
+    <p>
+      Excelの各種機能や関数を学びながら、
+      業務管理や日常生活に役立つツールを実際に制作しています。
+      単に機能を覚えるだけではなく、
+      「情報を分かりやすく整理すること」
+      「入力や確認をしやすくすること」
+      「作業を効率化すること」を意識して制作に取り組んでいます。
+    </p>
+  </div>
 </section>
 
 
 <section>
+  <h2 class="section-title">Skills & Qualifications</h2>
 
-<h2 class="section-title">Skills & Qualifications</h2>
+  <div class="info-grid">
 
-<div class="info-grid">
+    <div class="info-card">
+      <h3>保有資格</h3>
 
-<div class="info-card">
+      <ul>
+        <li>MOS Excel Expert</li>
+        <li>MOS Excel Associate</li>
+      </ul>
+    </div>
 
-<h3>保有資格</h3>
+    <div class="info-card">
+      <h3>スキル・学習分野</h3>
 
-<ul>
-<li>MOS Excel Expert</li>
-<li>MOS Excel Associate</li>
-</ul>
+      <div class="skills">
+        <span class="skill">Excel</span>
+        <span class="skill">Excel関数</span>
+        <span class="skill">グラフ・可視化</span>
+        <span class="skill">データ管理</span>
+      </div>
 
-</div>
+      <p class="learning-note">
+        実際にツールを制作しながら、Excelを使った業務効率化や
+        データ管理について継続して学習しています。
+      </p>
+    </div>
 
-
-<div class="info-card">
-
-<h3>スキル</h3>
-
-<div class="skills">
-
-<span class="skill">Excel</span>
-<span class="skill">Excel関数</span>
-
-</div>
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
 
 <section>
+  <h2 class="section-title">Works</h2>
 
-<h2 class="section-title">Works</h2>
-
-<div class="projects">
-
-
-<!-- 業務管理システム -->
-
-<article class="project">
-
-<div class="project-image">
-<img src="business-system.png"
-     alt="業務管理システムのダッシュボード画面">
-</div>
-
-<div class="project-content">
-
-<span class="project-label">Excel 業務管理</span>
-
-<h3>業務管理システム</h3>
-
-<p>
-タスクの進捗状況を一元管理し、
-業務全体の状況を把握しやすくすることを目的に制作したExcel管理システムです。
-</p>
-
-<p>
-ダッシュボードから総タスク数・完了率・進行状況などを確認でき、
-担当者別の集計にも対応できる構成にしています。
-</p>
-
-<div class="features">
-<strong>主な機能</strong><br>
-タスク管理 ／ 進捗管理 ／ ダッシュボード ／ 担当者別集計
-</div>
-
-</div>
-
-</article>
+  <div class="projects">
 
 
-<!-- 入出庫・在庫管理表 -->
+    <!-- 業務管理システム -->
 
-<article class="project">
+    <article class="project">
 
-<div class="project-image">
-<img src="inventory-system.png"
-     alt="入出庫・在庫管理表の画面">
-</div>
+      <div class="project-image">
+        <img src="business-system.png"
+             alt="業務管理システムのダッシュボード画面">
+      </div>
 
-<div class="project-content">
+      <div class="project-content">
 
-<span class="project-label">Excel 在庫管理</span>
+        <span class="project-label">Excel・業務管理</span>
 
-<h3>入出庫・在庫管理表</h3>
+        <h3>業務管理システム</h3>
 
-<p>
-商品の入庫・出庫を記録し、
-在庫状況を分かりやすく管理するために制作したExcelツールです。
-</p>
+        <p>
+          タスクの進捗状況を一元管理し、
+          業務全体の状況を把握しやすくすることを目的に制作した
+          Excel管理システムです。
+        </p>
 
-<p>
-日々の入出庫情報を入力し、
-在庫管理につなげられる実用的な構成を意識して制作しています。
-</p>
+        <p>
+          ダッシュボードから総タスク数、完了率、進行状況などを確認でき、
+          担当者別の集計も行える構成にしています。
+          必要な情報を一つの画面で確認しやすくすることを意識しました。
+        </p>
 
-<div class="features">
-<strong>主な機能</strong><br>
-入庫記録 ／ 出庫記録 ／ 在庫管理
-</div>
+        <div class="features">
+          <strong>主な機能</strong><br>
+          タスク管理 ／ 進捗管理 ／ ダッシュボード ／ 担当者別集計
+        </div>
 
-</div>
-
-</article>
-
-
-<!-- ペットお世話記録 -->
-
-<article class="project">
-
-<div class="project-image">
-<img src="pet-care3.png"
-     alt="ペットお世話記録のカレンダーとグラフ">
-</div>
-
-<div class="project-content">
-
-<span class="project-label">Excel 記録・可視化</span>
-
-<h3>ペットお世話記録</h3>
-
-<p>
-複数のペットのお世話状況を記録・管理するために制作したExcelツールです。
-</p>
-
-<p>
-日々の記録をカレンダー形式で確認でき、
-飼育状況の推移をグラフで可視化できるようにしています。
-複数の個体を管理しやすい構成も意識しました。
-</p>
-
-<div class="features">
-<strong>主な機能</strong><br>
-個体情報管理 ／ 飼育記録 ／ カレンダー表示 ／ 推移グラフ
-</div>
-
-</div>
-
-</article>
+      </div>
+    </article>
 
 
-</div>
+    <!-- 入出庫・在庫管理表 -->
 
+    <article class="project">
+
+      <div class="project-image">
+        <img src="inventory-system.png"
+             alt="入出庫・在庫管理表の画面">
+      </div>
+
+      <div class="project-content">
+
+        <span class="project-label">Excel・在庫管理</span>
+
+        <h3>入出庫・在庫管理表</h3>
+
+        <p>
+          商品の入庫・出庫を記録し、
+          在庫状況を分かりやすく管理することを目的に制作したExcelツールです。
+        </p>
+
+        <p>
+          日々の入出庫情報を記録し、
+          必要な情報を確認しやすい構成を意識しています。
+          実際の業務で使うことを想定して制作しました。
+        </p>
+
+        <div class="features">
+          <strong>主な機能</strong><br>
+          入庫記録 ／ 出庫記録 ／ 在庫管理 ／ 入力補助
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- ペットお世話記録 -->
+
+    <article class="project">
+
+      <div class="project-image">
+        <img src="pet-care3.png"
+             alt="ペットお世話記録のカレンダーとグラフ">
+      </div>
+
+      <div class="project-content">
+
+        <span class="project-label">Excel・記録・可視化</span>
+
+        <h3>ペットお世話記録</h3>
+
+        <p>
+          複数のペットのお世話状況を記録・管理するために制作した
+          Excelツールです。
+        </p>
+
+        <p>
+          日々の記録をカレンダー形式で確認でき、
+          飼育状況の推移をグラフで可視化できるようにしています。
+          複数の個体を分けて管理しながら、
+          状況を直感的に確認できるよう工夫しました。
+        </p>
+
+        <div class="features">
+          <strong>主な機能</strong><br>
+          個体情報管理 ／ 飼育記録 ／ カレンダー表示 ／ 推移グラフ
+        </div>
+
+      </div>
+    </article>
+
+
+    <!-- 服薬・通院管理Webアプリ -->
+
+    <article class="project">
+
+      <div class="project-image">
+        <img src="medication-app.png"
+             alt="服薬・通院管理Webアプリの画面">
+      </div>
+
+      <div class="project-content">
+
+        <span class="project-label">Webアプリ・AI活用</span>
+
+        <h3>服薬・通院管理Webアプリ</h3>
+
+        <p>
+          毎日の服薬記録や頓服の記録、
+          通院予定などを一つの画面で管理できるようにすることを目的に
+          制作したWebアプリです。
+        </p>
+
+        <p>
+          朝・昼・夕・寝る前の服薬状況を記録できるほか、
+          カレンダーによる履歴確認、頓服記録、次回通院日の登録、
+          服薬時間の設定、データのバックアップ機能などを備えています。
+        </p>
+
+        <div class="features">
+          <strong>主な機能</strong><br>
+          定期薬の服薬記録 ／ 頓服記録 ／ カレンダー表示 ／
+          通院予定管理 ／ 服薬時間設定 ／ データバックアップ
+        </div>
+
+        <div class="note">
+          <strong>制作方法：</strong>
+          AIを活用して要件の整理やコード生成・修正を行い、
+          動作を確認しながらWebアプリとして制作・公開しました。
+        </div>
+
+      </div>
+    </article>
+
+
+  </div>
 </section>
 
 </main>
 
-
 <footer>
-Excel Portfolio — 学習したスキルを実践的な制作物へ
+  Excel Portfolio — 学んだ知識を、実際に使える仕組みへ
 </footer>
 
 </body>
